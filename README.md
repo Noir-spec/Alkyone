@@ -1,2 +1,2 @@
-# alkyonedeneme
-deneme
+# Alkyone
+Alkyone klan botu
