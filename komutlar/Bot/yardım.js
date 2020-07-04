@@ -97,7 +97,7 @@ exports.run = async (client, msg, args) => {
       .setColor(ayarlar.renk);
       
   /////////////////////////////////////
-eklenenlerin listesi
+
   
   /////////////////////////////////////
   
