@@ -33,7 +33,7 @@ Diğer İlerlemeler: ${genel.unknownProgress}
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["w-rfkurulum"],
+    aliases: ["w-rfbuild"],
     permLevel: 0,
     kategori: "oyun",
     oysistem: false
