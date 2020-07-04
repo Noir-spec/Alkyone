@@ -1,8 +1,6 @@
 const db = require('quick.db')
 const Discord = require('discord.js')
 const ayarlar = require('../../ayarlar.json');
-const { Canvas } = require('canvas-constructor');
-const { get } = require('node-superfetch');
 
 exports.run = async (client, msg, args) => {
   let prefix = await require('quick.db').fetch(`prefix_${msg.guild.id}`) || ayarlar.prefix
