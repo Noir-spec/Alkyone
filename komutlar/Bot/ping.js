@@ -24,4 +24,4 @@ exports.help = {
   description: 'Botun gecikme süresini gösterir.',
   usage: `${ayarlar.prefix}ping`
 };
-   s
+   
