@@ -51,8 +51,8 @@ exports.run = async (client, msg, args) => {
       .addField("kick", `Kullanım: \`${prefix}kick @kullanıcı sebep\``) 
       .addField("clear", `Kullanım: \`${prefix}clear 0/100\``)
       .addField("Kayıt Kanalı (Log)", `Kullanım: \`${prefix}log #kanal/kapat\``)
-      .addField("Giriş Çıkış", `Kullanım: \`${prefix}giriş-çıkış aç #kanal/kapat\``) (hazır değil) 
-      .addField("Otorol", `Kullanım: \`${prefix}otorol ayarla @rol/sıfırla\``) (hazır değil) 
+      .addField("Giriş Çıkış", `Kullanım: \`${prefix}giriş-çıkış aç #kanal/kapat\``) 
+      .addField("Otorol", `Kullanım: \`${prefix}otorol ayarla @rol/sıfırla\``)  
       .setColor(ayarlar.renk);
   
   /////////////////////////////////////
