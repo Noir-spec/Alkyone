@@ -31,7 +31,7 @@ exports.run = (bot, message, args) =>
 module.exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: ["banlılar","banliste","banlananlar","cezalandırılanlar","banlist"],
+  aliases: ["banlılar","banlist","banlananlar","cezalandırılanlar","banlist"],
   permLevel: 3,
   kategori: "Yetkili"
 };
