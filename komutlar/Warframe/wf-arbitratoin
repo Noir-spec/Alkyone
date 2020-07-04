@@ -34,7 +34,7 @@ Node: ${genel.node}
 exports.conf = {
     enabled: true,
     guildOnly: false,
-    aliases: ["w-arbitration"],
+    aliases: ["w-arbitration" , "w-arbit"],
     permLevel: 0,
     kategori: "oyun",
     oysistem: false
