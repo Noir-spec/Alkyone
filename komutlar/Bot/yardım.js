@@ -45,21 +45,14 @@ exports.run = async (client, msg, args) => {
       .setDescription(
         "**Yetkili Komutlarım**"
       )
-      .addField("Yasakla", `Kullanım: \`${prefix}yasakla @kullanıcı sebep\``)
-      .addField("Yasak Kaldır", `Kullanım: \`${prefix}yasak-kaldır ID\``)
-      .addField("Sustur", `Kullanım: \`${prefix}sustur @kullanıcı sebep\``)
-      .addField("Sustur Aç", `Kullanım: \`${prefix}sustur-aç @kullanıcı\``)
-      .addField("Süreli Sustur", `Kullanım: \`${prefix}sürelisustur @kullanıcı 1m\``)
-      .addField("At", `Kullanım: \`${prefix}at @kullanıcı sebep\``)
-      .addField("Küfür Engel", `Kullanım: \`${prefix}küfür-engel aç/kapat sunucu/kanal\``)
-      .addField("Link Engel", `Kullanım: \`${prefix}link-engel aç/kapat sunucu/kanal\``)
-      .addField("Caps Engel", `Kullanım: \`${prefix}caps-engel aç/kapat sunucu/kanal\``)
-      .addField("Yavaş Mod", `Kullanım: \`${prefix}yavaş-mod 0/20\``)
-      .addField("Sil", `Kullanım: \`${prefix}sil 0/100\``)
-      .addField("Kayıt Kanalı (Log)", `Kullanım: \`${prefix}kayıt-kanalı #kanal/kapat\``)
-      .addField("Giriş Çıkış", `Kullanım: \`${prefix}giriş-çıkış aç #kanal/kapat\``)
-      .addField("Otorol", `Kullanım: \`${prefix}otorol ayarla @rol/sıfırla\``)
-      .addField("Seviye Sistemi", `Kullanım: \`${prefix}seviye-sistemi aç/kapat\``)
+      .addField("ban", `Kullanım: \`${prefix}ban @kullanıcı sebep\``)
+      .addField("mute", `Kullanım: \`${prefix}mute @kullanıcı sebep\``)
+      .addField("unmute", `Kullanım: \`${prefix}unmute @kullanıcı\``)
+      .addField("kick", `Kullanım: \`${prefix}kick @kullanıcı sebep\``) 
+      .addField("clear", `Kullanım: \`${prefix}clear 0/100\``)
+      .addField("Kayıt Kanalı (Log)", `Kullanım: \`${prefix}log #kanal/kapat\``)
+      .addField("Giriş Çıkış", `Kullanım: \`${prefix}giriş-çıkış aç #kanal/kapat\``) (hazır değil) 
+      .addField("Otorol", `Kullanım: \`${prefix}otorol ayarla @rol/sıfırla\``) (hazır değil) 
       .setColor(ayarlar.renk);
   
   /////////////////////////////////////
@@ -68,18 +61,16 @@ exports.run = async (client, msg, args) => {
       .setDescription(
         "**Müzik Komutlarım**"
       )
-      .addField("Çal", `Kullanım: \`${prefix}çal müzik ismi\``)
-      .addField("Ara", `Kullanım: \`${prefix}ara müzik ismi\``)
-      .addField("Ayrıl", `Kullanım: \`${prefix}ayrıl\``)
-      .addField("Geç", `Kullanım: \`${prefix}geç\``)
-      .addField("Ses", `Kullanım: \`${prefix}ses [1/100]\``)
-      .addField("Durdur", `Kullanım: \`${prefix}durdur\``)
-      .addField("Devam", `Kullanım: \`${prefix}devam\``)
-      .addField("Çalan", `Kullanım: \`${prefix}çalan\``)
-      .addField("Sıra", `Kullanım: \`${prefix}sıra\``)
-      .addField("Tekrar", `Kullanım: \`${prefix}tekrar\``)
-      .addField("Radyo", `Kullanım: \`${prefix}radyo\``)
-      .addField("Lyrics", `Kullanım: \`${prefix}şarkısözü\``)
+      .addField("play", `Kullanım: \`${prefix}play müzik ismi\``)
+      .addField("search", `Kullanım: \`${prefix}search müzik ismi\``)
+      .addField("leave", `Kullanım: \`${prefix}leave\``) (eklenmedi) 
+      .addField("skip", `Kullanım: \`${prefix}skip\``)
+      .addField("volume", `Kullanım: \`${prefix}volume [1/100]\``)
+      .addField("pause", `Kullanım: \`${prefix}pause\``)
+      .addField("resume", `Kullanım: \`${prefix}resume\``)
+      .addField("np", `Kullanım: \`${prefix}np\``)
+      .addField("queue", `Kullanım: \`${prefix}queue\``)
+      .addField("loop", `Kullanım: \`${prefix}loop\``)
       .setColor(ayarlar.renk);
   
   /////////////////////////////////////
@@ -88,58 +79,27 @@ exports.run = async (client, msg, args) => {
       .setDescription(
         "**Eğlence Komutlarım**"
       )
-      .addField("Anime", `Kullanım: \`${prefix}anime\``)
-      .addField("Sarıl", `Kullanım: \`${prefix}sarıl @kullanıcı\``)
-      .addField("Vur", `Kullanım: \`${prefix}vur @kullanıcı\``)
-      .addField("Dürt", `Kullanım: \`${prefix}dürt @kullanıcı\``)
-      .addField("Öp", `Kullanım: \`${prefix}öp @kullanıcı\``)
-      .addField("Kanna", `Kullanım: \`${prefix}kanna yazı\``)
-      .addField("Fal", `Kullanım: \`${prefix}fal\``)
-      .addField("Yazdır", `Kullanım: \`${prefix}yazdır <mesaj>\``)
+      .addField("server-icon", `Kullanım: \`${prefix}server-icon\``)
+      .addField("afk", `Kullanım: \`${prefix}afk\``)
       .addField("Yazı Tura", `Kullanım: \`${prefix}yazı-tura\``)
-      .addField("Triggered", `Kullanım: \`${prefix}triggered\``)
-      .addField("Anime Avatar", `Kullanım: \`${prefix}anime-avatar\``)
+      .addField("Avatar", `Kullanım: \`${prefix}avatar\``)
       .setColor(ayarlar.renk);
       
   /////////////////////////////////////
   
   const diğer = new Discord.RichEmbed()
       .setDescription(
-        "**Kullanıcı Komutlarım**"
+        "**Warframe Komutlarım**"
       )
-      .addField("Afk", `Kullanım: \`${prefix}afk sebep\``)
-      .addField("Avatar", `Kullanım: \`${prefix}avatar\``)
-      .addField("Hava Durumu", `Kullanım: \`${prefix}havadurumu şehir\``)
-      .addField("Profil", `Kullanım: \`${prefix}profil\``)
-      .addField("[Profil] Açıklama",`Kullanım: \`${prefix}açıklama Cocoa en iyi bot.\``)
-      .addField("Kredi", `Kullanım: \`${prefix}kredi\``)
-      .addField("Beğen", `Kullanım: \`${prefix}beğen @kullanıcı\``)
+      .addField("w-cetus", `Kullanım: \`${prefix}w-cetus\``)
+      .addField("w-arbit", `Kullanım: \`${prefix}w-arbit\``)
+      .addField("w-rfbuild", `Kullanım: \`${prefix}w-rfbuild\``)
       .setColor(ayarlar.renk);
       
   /////////////////////////////////////
-  
-  const ayar = new Discord.RichEmbed()
-      .setDescription(
-        "**Ayar Komutlarım**"
-      )
-      .addField("Çalışmakanal", `Kullanım: \`${prefix}çalışmakanal #kanal\``)
-      .addField("Çalıştır", `Kullanım: \`${prefix}çalıştır #kanal\``)
-      .addField("Prefix", `Kullanım: \`${prefix}prefix l!\``)
-      .addField("İstatistik", `Kullanım: \`${prefix}istatistik\``)
-      .addField("Bildirim", `Kullanım: \`${prefix}bildirim\``)
-      .addField("Güncelleme Notu", `Kullanım: \`${prefix}güncelleme-notu\``)
-      .setColor(ayarlar.renk);
+eklenenlerin listesi
   
   /////////////////////////////////////
-  
-  const mesaj = new Discord.RichEmbed()
-      .setDescription(
-        `Linkler
-\n\n[Web Site](https://cocoa-bot-tr.glitch.me)
-\n~~[Destek Sunucumuz]~~
-\n[Oy Ver](https://top.gg/bot/683098088965275675/vote)`
-      )
-      .setColor(ayarlar.renk);
   
   //await client.users.get(`${msg.author.id}`).send({file: new Discord.Attachment(await createCanvas(), 'profil.png')})
   await client.users.get(`${msg.author.id}`).send(yetkili);
