@@ -150,6 +150,21 @@ client.on("error", e => {
 
 client.login(ayarlar.token);
 
+
+//Noir'e özel cevap sistemi
+
+client.on('message', async msg => {
+    if (msg.content.toLowerCase() === ':black_heart:') {
+        await
+        msg.channel.send(`Hoşgeldin Efendim`)
+    }
+
+});
+
+//Bunu bot.js ve ya index.js ye sallayacaksın
+
+
+
 //log sistemi
 
 //DİKKAT! BU KISMI BOT.JS VE YA İNDEX.JS HANGİSİ VARSA ONUN İÇİNE EN ALT KISMA ATACAKSIN
