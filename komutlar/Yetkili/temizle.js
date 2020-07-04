@@ -24,7 +24,7 @@ exports.conf = {
 exports.help = {
     name: 'sil',
     description: 'Belirlenen miktarda mesajı siler.',
-    usage: 'sil <silinicek mesaj sayısı>'
+    usage: 'clear <silinicek mesaj sayısı>'
 };
 
 //ItsukaShido© - Berat Koyuncu 2019
