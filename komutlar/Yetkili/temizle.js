@@ -1,42 +1,30 @@
-exports.run = async (client, message, args) => {
-        if (message.deletable) {
-            message.delete();
-        }
-    
-        // Member doesn't have permissions
-        if (!message.member.hasPermission("MANAGE_MESSAGES")){
-            return message.reply("Yetkin yok.").then(m => m.delete(5000));
-        }
+const Discord = require('discord.js');
+exports.run = function(client, message, args) {
+    if (!args[0]) return message.channel.send("Ne kadar mesaj silmem gerekli?");
+    message.channel.bulkDelete(args[0]).then(() => {
+        const botunmesajyonet = new Discord.RichEmbed()
+        let messagecount = parseInt(args.join(' '));
+        message.channel.fetchMessages({
+            limit: messagecount
+        }).then(messages => message.channel.bulkDelete(messages));
+        message.channel.send(`:white_check_mark: Başarıyla \`${args[0]}\` Adet mesaj silindi.`).then(msg => msg.delete(10000))
 
-        // Check if args[0] is a number
-        if (isNaN(args[0]) || parseInt(args[0]) <= 0) {
-            return message.reply("Şey.... Acaba numara girmeyi mi unuttunuz? 0 mesajı silmem mümkün değilde...").then(m => m.delete(5000));
-        }
+    })
+}
 
-        // Maybe the bot can't delete messages
-        if (!message.guild.me.hasPermission("MANAGE_MESSAGES")) {
-            return message.reply("Üzgünüm... Messajları silemiyorum. ;-;").then(m => m.delete(5000));
-        }
 
-        let deleteAmount;
-
-        if (parseInt(args[0]) > 100) {
-            deleteAmount = 100;
-        } else {
-            deleteAmount = parseInt(args[0]);
-        }
-
-        message.channel.bulkDelete(deleteAmount, true)
-            .then(deleted => message.channel.send(`\`${deleted.size}\` kadar mesajı başarıyla imha ettim.`))
-            .catch(err => message.reply(`Nedenini bilmediğim bir şekilde hata verdi. \n Hata: ${err}`));
-    };
-  exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['temizle', 'sil', 'clear'],
-  permLevel: 0
+exports.conf = {
+    enabled: true,
+    guildOnly: true,
+    aliases: ['sil'],
+    permLevel: 1,
+    kategori: "Yetkili"
 };
 
 exports.help = {
-  name: 'temizle',
+    name: 'sil',
+    description: 'Belirlenen miktarda mesajı siler.',
+    usage: 'sil <silinicek mesaj sayısı>'
 };
+
+//ItsukaShido© - Berat Koyuncu 2019
