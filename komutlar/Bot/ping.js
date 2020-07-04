@@ -25,4 +25,4 @@ exports.help = {
   usage: `${ayarlar.prefix}ping`
 };
    
-1
+
