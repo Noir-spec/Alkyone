@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const db = require('quick.db');
 const YouTube = require('simple-youtube-api');
-const ytdl = require('ytdl-core') 1
+const ytdl = require('ytdl-core') 
 const ayarlar = require('../../ayarlar.json');
 const bot = require("../../bot.js");
 const fetchVideoInfo = require("youtube-info");
