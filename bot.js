@@ -154,7 +154,7 @@ client.login(ayarlar.token);
 //Noir'e özel cevap sistemi
 
 client.on('message', async msg => {
-    if (msg.content.toLowerCase() === ':black_heart:') {
+    if (msg.content.toLowerCase() === ":black_heart:") {
         await
         msg.channel.send(`Hoşgeldin Efendim`)
     }
