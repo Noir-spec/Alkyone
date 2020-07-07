@@ -35,7 +35,7 @@ client.queue = new Map()
 
 ///////////// KOMUTLAR BAŞ
 
-//Noir'e özel cevap sistemi
+///Noir'e özel cevap sistemi
 
 client.on('message', async msg => {
     if (msg.content.toLowerCase() === ':black_heart:') {
